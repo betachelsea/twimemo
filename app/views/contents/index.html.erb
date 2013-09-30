@@ -8,6 +8,11 @@
     <% end %>
     <br />
     <%= button_to "TL読み込み", :action => "getTimeline" %>
+    <% if @timeline.present? %>
+        <% @timeline.each do |twi| %>
+            <p><%= twi.user.screen_name %></p>
+        <% end %>
+    <% end %>
     <%= link_to "サインアウトする", "/signout" %>
 <% else %>
     <%= link_to "Twitterでログインする", "/auth/twitter" %>

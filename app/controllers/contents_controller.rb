@@ -14,7 +14,6 @@ class ContentsController < ApplicationController
     def getTimeline
         client = Twitter::Client.new
         @timeline = client.home_timeline()
-        redirect_to :action => "index"
     end
 
     private

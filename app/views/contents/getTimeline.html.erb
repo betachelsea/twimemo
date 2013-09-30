@@ -1,0 +1,7 @@
+<p>timeline</p>
+
+<% if @timeline.present? %>
+<% @timeline.each do |twi| %>
+<p><%= twi.user.screen_name %></p>
+<% end %>
+<% end %>
